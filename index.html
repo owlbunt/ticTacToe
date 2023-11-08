@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <!-- [ External CSS ] -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <!-- [  Container  ] -->
+    <div class="container">
+        <!-- Game Over Panel  -->
+        <div class="gameOverPanel">
+            <div>
+                <div><img src="assets/icons/logo.svg" alt="Winner Icon"> <h2>TAKES THE ROUND !</h2></div>
+                <div class="btns">
+                    <button class="btn quit" style="background: #31c4be;">QUIT</button>
+                    <button class="btn nextRound">NEXT ROUND</button>
+                </div>
+            </div>
+        </div>
+        <!--[  Game Body  ]-->
+        <div class="gameBody">
+            <!-- [  Top Section  ] -->
+            <div class="topSection">
+                <!-- [  Gmae Icon  ] -->
+                <div class="gameIcon">
+                    <img src="assets/icons/logo.svg" alt="LOGO">
+                </div>
+                <!-- [  Player Turn  ] -->
+                <div class="currentPlayer">
+                    <img src="assets/icons/icon-x-turn.svg" alt="Current Player">
+                    <span>TURN</span>
+                </div>
+                <!-- [   Rest Button  ] -->
+                <div class="reset">
+                  <button class="resetBtn">
+                    <img src="assets/icons/icon-restart.svg" alt="Reset Button">
+                  </button>
+                </div>
+            </div>
+
+            <!-- [  Game Board  ] -->
+            <div class="gameBoard">
+                <!-- [  1st Row  ] -->
+                <div class="row">
+                    <div class="col"><img src=""></div>
+                    <div class="col"><img src=""></div>
+                    <div class="col"><img src=""></div>
+                </div>
+                <!-- [  2nd Row  ] -->
+                <div class="row">
+                    <div class="col"><img src=""></div>
+                    <div class="col"><img src=""></div>
+                    <div class="col"><img src=""></div>
+                </div>
+                <!-- [  3rd Row  ] -->
+                <div class="row">
+                    <div class="col"><img src=""></div>
+                    <div class="col"><img src=""></div>
+                    <div class="col"><img src=""></div>
+                </div>
+            </div>
+
+            <!-- [  Bottom Section  ] -->
+            <div class="bottomSection">
+                <!-- [  Player 1 Points  ] -->
+                <div class="playerOne">
+                    <span class="label">x (p1)</span>
+                    <span class="score">0</span>
+                </div>
+                <!-- [  Draw Points  ] -->
+                <div class="drawPoints">
+                    <span class="label">ties</span>
+                    <span class="score">0</span>
+                </div>
+                <!-- [  Player 2 Points  ] -->
+                <div class="playerTwo">
+                    <span class="label">o (p2)</span>
+                    <span class="score">0</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- [ External JavaScript ] -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
