@@ -27,7 +27,11 @@ let drawScore = 0 ;
 let gameIsOver = false;
 let gameOverPanel = document.querySelector(".gameOverPanel");
 // Logo Icon 
-let logoIcon = "assets/icons/logo.svg"
+let logoIcon = "assets/icons/logo.svg";
+// Game Audio
+let clickSound = document.querySelector("#clickSound");
+let winSound = document.querySelector("#winSound");
+let gameOverSound = document.querySelector("#gameOverSound");
 
 // Reset Function ( Clear Board )
 resetBtn.addEventListener("click", reset);
@@ -76,6 +80,7 @@ for (let i = 0; i < 9; i++) {
             checkWinner();
             currentPlayer = o ;
             hover = oHover;
+            clickSound.play();
         }
         else if(currentPlayer == o && occupied !== x && occupied !== o && gameIsOver == false){
             this.querySelector("img").src = currentPlayer ; 
@@ -83,6 +88,7 @@ for (let i = 0; i < 9; i++) {
             checkWinner();
             currentPlayer = x ;
             hover = xHover;
+            clickSound.play();
         }
     });
 }
@@ -134,6 +140,7 @@ function checkWinner(){
         }        
     }
     if(cellOccupied > 8 && winner == undefined){
+        gameOverSound.play();
         gameIsOver = true;
         for(let i =0 ; i < 9; i ++){
             let cell = cells[i];
@@ -159,6 +166,7 @@ function checkWinner(){
 
 // Game Over
 function gameOver(a,b,c){
+    winSound.play();
     gameIsOver = true;
     if(winner == "x"){
         a.style.background = "#31c3bdff";
